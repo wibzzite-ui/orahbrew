@@ -26,26 +26,29 @@ export const BRAND_INFO = {
   demoDisclaimer: "This website is an independent design concept developed by WibzZite. Real café photographs provided by Orah Brew Garden.",
 };
 
+const BASE = import.meta.env.BASE_URL || '/';
+const cleanBase = BASE.endsWith('/') ? BASE : `${BASE}/`;
+
 // All 10 Authentic Orah Brew Garden Photographs with Ultra High-Definition (HD) Upgrades
 export const REAL_CAFE_PHOTOS = {
   // Ultra HD Enhanced Assets
-  heroMain: "/images/orah_table_dining_spread_hd.jpg",
-  storyMain: "/images/orah_stamped_ice_cocktail_hd.jpg",
-  storyFloating: "/images/orah_craft_beer_glasses.jpg",
-  pizzaPepperoni: "/images/orah_pepperoni_pizza_sourdough_hd.jpg",
-  dessertCheesecake: "/images/orah_popcorn_cheesecake_dessert_hd.jpg",
-  stampedCocktail: "/images/orah_stamped_ice_cocktail_hd.jpg",
-  craftBeers: "/images/orah_craft_beer_glasses.jpg",
-  diningSpread: "/images/orah_table_dining_spread_hd.jpg",
-  dimSumSteamer: "/images/orah_dim_sum_steamer.jpg",
-  gourmetStarter: "/images/orah_gourmet_starter_cocktail.jpg",
-  operaCake: "/images/orah_opera_cake_dessert.jpg",
-  wineShadows: "/images/orah_wine_tasting_shadows_hd.jpg",
-  crispySalad: "/images/orah_crispy_garden_salad.jpg",
+  heroMain: `${cleanBase}images/orah_table_dining_spread_hd.jpg`,
+  storyMain: `${cleanBase}images/orah_stamped_ice_cocktail_hd.jpg`,
+  storyFloating: `${cleanBase}images/orah_craft_beer_glasses.jpg`,
+  pizzaPepperoni: `${cleanBase}images/orah_pepperoni_pizza_sourdough_hd.jpg`,
+  dessertCheesecake: `${cleanBase}images/orah_popcorn_cheesecake_dessert_hd.jpg`,
+  stampedCocktail: `${cleanBase}images/orah_stamped_ice_cocktail_hd.jpg`,
+  craftBeers: `${cleanBase}images/orah_craft_beer_glasses.jpg`,
+  diningSpread: `${cleanBase}images/orah_table_dining_spread_hd.jpg`,
+  dimSumSteamer: `${cleanBase}images/orah_dim_sum_steamer.jpg`,
+  gourmetStarter: `${cleanBase}images/orah_gourmet_starter_cocktail.jpg`,
+  operaCake: `${cleanBase}images/orah_opera_cake_dessert.jpg`,
+  wineShadows: `${cleanBase}images/orah_wine_tasting_shadows_hd.jpg`,
+  crispySalad: `${cleanBase}images/orah_crispy_garden_salad.jpg`,
   // New Architectural Real Photos
-  interiorWide: "/images/orah-interior-wide.jpg",
-  entranceVertical: "/images/orah-entrance.jpg",
-  interiorSeating: "/images/orah-interior-seating.jpg",
+  interiorWide: `${cleanBase}images/orah-interior-wide.jpg`,
+  entranceVertical: `${cleanBase}images/orah-entrance.jpg`,
+  interiorSeating: `${cleanBase}images/orah-interior-seating.jpg`,
 };
 
 export const MENU_CATEGORIES = [
