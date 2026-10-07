@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terracotta: #A65F5B;
+  --color-muted-rose: #B87570;
+  --color-peach: #F5C6AD;
+  --color-light-peach: #FBE3D5;
+  --color-warm-ivory: #FFF5ED;
+  --color-soft-beige: #E8D5C4;
+  --color-sand-beige: #D5B99E;
+  --color-espresso: #30211F;
+  --color-muted-brown: #78615B;
+  --color-sage: #A8B59A;
+  --color-botanical: #87977A;
+  --color-olive: #4E6049;
+  
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+
+  body {
+    background-color: var(--color-warm-ivory);
+    color: var(--color-espresso);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-serif-heading {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #B87570;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A65F5B;
+}
+
+/* Subtle image zoom & card micro-interactions */
+.img-hover-zoom {
+  overflow: hidden;
+}
+.img-hover-zoom img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Custom badge rotation */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+/* Soft textured background pattern */
+.bg-grain {
+  background-image: radial-gradient(rgba(166, 95, 91, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
